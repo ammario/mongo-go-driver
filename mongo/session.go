@@ -236,7 +236,7 @@ func (s *sessionImpl) ClusterTime() bson.Raw {
 	return s.clientSession.ClusterTime
 }
 
-func (s *sessionContext) WithContext(ctx context.Context) SessionContext {
+func (s *sessionImpl) WithContext(ctx context.Context) SessionContext {
 	return contextWithSession(ctx, s)
 }
 
